@@ -1,0 +1,61 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards-container .card {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    margin: 15px;
+    perspective: 1000px;
+}
+
+.cards-container .card .card-inner {
+    border: 3px solid black;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.cards-container .card .card-inner .preview-image {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.search-container {
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+.search-container .search-container-inner input {
+    margin-right: 20px;
+}
+
+.search-container .search-container-inner a {
+    border: 1px solid rgba(131, 1, 1,);
+    color: white;
+    border-radius: 10px;
+    background: rgb(255, 55, 55);
+    padding: 2px 5px;
+}
+
+.search-container .search-container-inner a:hover {
+    background: rgb(136, 57, 57);
+}
