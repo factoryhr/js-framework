@@ -1,9 +1,17 @@
 class NewsApi {
     constructor(apiKey) {
         this.apiKey = apiKey;
-        this.cache = {
+        this._cache = {
             responses: {}
         };
+    }
+
+    get cache() {
+        return this._cache;
+    }
+
+    set cache(param) {
+        this._cache = param;
     }
 
     async getResponse(query) {
@@ -17,7 +25,6 @@ class NewsApi {
             this.cache.responses[query] = data;
             return this.cache.responses[query];    
         } catch (error) {
-            console.log('I am error incarnate')
             return [];
         }
     }
@@ -110,4 +117,3 @@ class NewsRenderer {
 const renderer = window.renderer = new NewsRenderer('797defe668ed400aaffaf1699e8ca036', 'app');
 
 renderer.init();
-
